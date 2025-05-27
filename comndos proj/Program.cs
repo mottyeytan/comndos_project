@@ -13,8 +13,8 @@ namespace MyNamespace
 
     public class Commando
     {
-        private string Name { get; }= "papa";
-        private string CodeName { get; set; } = "x";
+        public string Name { get; }= "papa";
+        public string CodeName { get; set; } = "x";
         private string[] Tools = new string[] { "Hammer", "Chisel", "Rope", "Bag", "Watery" };
         private Status Status { get; set; }
 
@@ -66,7 +66,7 @@ namespace MyNamespace
             Console.WriteLine("The soldier is hiding");
         }
 
-        public void Attack(string input)
+        public virtual void Attack(string input)
         {
             if (input == "codename")
             {
@@ -78,6 +78,28 @@ namespace MyNamespace
             }
         }
 
+    }
+
+    public class AirCommando : Commando
+    {
+        public AirCommando(string name, string codeName, string[] tools, Status status) : base(name, codeName, tools, status)
+        {
+            
+        }
+
+        public override void Attack(string input)
+        {
+            if (input == "codename")
+            {
+                Console.WriteLine($" {this.CodeName} Air commandos can parachute ");
+            }
+            else if (input == "name")
+            {
+                Console.WriteLine($"{this.Name} Air commandos can parachute");
+            }
+        }
+        
+            
     }
 
     public class Weapon
@@ -113,9 +135,14 @@ namespace MyNamespace
         {
             Commando commando = new Commando();
             Console.WriteLine( commando.GetName());
-           
-            
-           
+
+            Console.WriteLine(commando.CodeName);
+            commando.CodeName = "y";
+            Console.WriteLine(commando.CodeName);
+
+
+
+
             // commando.Attack("codename");
             // commando.Hide();
             // commando.Walk();
