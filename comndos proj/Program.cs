@@ -13,7 +13,7 @@ namespace MyNamespace
 
     public class Commando
     {
-        private string Name { get; set; } = "papa";
+        private string Name { get; }= "papa";
         private string CodeName { get; set; } = "x";
         private string[] Tools = new string[] { "Hammer", "Chisel", "Rope", "Bag", "Watery" };
         private Status Status { get; set; }
@@ -30,6 +30,11 @@ namespace MyNamespace
         public Commando()
         {
            
+        }
+
+        public string GetName()
+        {
+            return this.Name;
         }
 
         public void Walk()
@@ -90,16 +95,21 @@ namespace MyNamespace
         static void Main(string[] args)
         {
             Commando commando = new Commando();
+            Console.WriteLine( commando.GetName());
+           
             
-            commando.Attack("codename");
-            commando.Hide();
-            commando.Walk();
-
-
-
-            Weapon weapon = new Weapon();
-            
-            weapon.Shoot();
+           
+            // commando.Attack("codename");
+            // commando.Hide();
+            // commando.Walk();
+            //
+            //
+            //
+            // Weapon weapon = new Weapon();
+            //
+            // weapon.Shoot();
         }
+        
+        
     }
 }
