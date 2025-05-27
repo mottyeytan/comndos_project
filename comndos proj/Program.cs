@@ -31,8 +31,12 @@ namespace MyNamespace
            this.Status = Status.walking;
            Console.WriteLine("The soldier is walking");
        }
-       
-       public voud 
+
+       public void Hide()
+       {
+           this.Status = Status.hiding;
+           Console.WriteLine("The soldier is hiding");
+       }
     }
 }
 
