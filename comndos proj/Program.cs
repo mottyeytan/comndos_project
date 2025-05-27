@@ -37,6 +37,23 @@ namespace MyNamespace
             return this.Name;
         }
 
+        public void SayName(string commanderRank)
+        {
+            if (commanderRank == "GENERAL")
+            {
+                Console.WriteLine( this.Name);
+               
+            }
+            else if (commanderRank == "COLONEL")
+            {
+                Console.WriteLine( this.CodeName); 
+            }
+            else
+            {
+                Console.WriteLine("this information is classified");
+            }
+        }
+
         public void Walk()
         {
             this.Status = Status.walking;
