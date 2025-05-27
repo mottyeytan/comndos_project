@@ -102,6 +102,27 @@ namespace MyNamespace
             
     }
 
+
+    public class SeaCommando : Commando
+    {
+        public SeaCommando(string name, string codeName, string[] tools, Status status) : base(name, codeName, tools, status)
+        {
+            
+        }
+
+        public override void Attack(string input)
+        {
+            if (input == "codename")
+            {
+                Console.WriteLine($" {this.CodeName} A naval commando can swim.");
+            }
+            else if (input == "name")
+            {
+                Console.WriteLine($"{this.Name} A naval commando can swim.");
+            }
+        }
+    }
+
     public class Weapon
     {
         private string Name { get; set; } 
