@@ -86,16 +86,22 @@ namespace MyNamespace
         {
             
         }
+        public AirCommando(){}
+
+        public void print()
+        {
+            Console.WriteLine("air commandi can parachute");
+        }
 
         public override void Attack(string input)
         {
             if (input == "codename")
             {
-                Console.WriteLine($" {this.CodeName} Air commandos can parachute ");
+                Console.WriteLine($" {this.CodeName} Air commandos attack ");
             }
             else if (input == "name")
             {
-                Console.WriteLine($"{this.Name} Air commandos can parachute");
+                Console.WriteLine($"{this.Name} Air commandos attack");
             }
         }
         
@@ -109,16 +115,22 @@ namespace MyNamespace
         {
             
         }
+        public SeaCommando(){}
+        
+        public void print()
+        {
+            Console.WriteLine("sea commando can swim");
+        }
 
         public override void Attack(string input)
         {
             if (input == "codename")
             {
-                Console.WriteLine($" {this.CodeName} A naval commando can swim.");
+                Console.WriteLine($" {this.CodeName} A naval commando attack.");
             }
             else if (input == "name")
             {
-                Console.WriteLine($"{this.Name} A naval commando can swim.");
+                Console.WriteLine($"{this.Name} A naval commando attack.");
             }
         }
     }
@@ -160,6 +172,22 @@ namespace MyNamespace
             Console.WriteLine(commando.CodeName);
             commando.CodeName = "y";
             Console.WriteLine(commando.CodeName);
+            
+            AirCommando airCommando = new AirCommando();
+           
+            
+            SeaCommando seaCommando = new SeaCommando();
+            
+            
+            
+            Commando[] soldiers = new []{commando, airCommando, seaCommando};
+
+            Console.WriteLine(soldiers.Length);
+
+            foreach (var soldier in soldiers)
+            {
+                soldier.Attack("name");
+            }
 
 
 

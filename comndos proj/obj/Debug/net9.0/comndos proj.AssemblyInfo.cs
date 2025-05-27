@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("comndos proj")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27be3dc4e3d0a6ba680da79b3291ff46606e50d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce5f517c4bee7b8590931dbad6dfa4d84705485a")]
 [assembly: System.Reflection.AssemblyProductAttribute("comndos proj")]
 [assembly: System.Reflection.AssemblyTitleAttribute("comndos proj")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
