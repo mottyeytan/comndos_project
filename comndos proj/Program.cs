@@ -27,6 +27,11 @@ namespace MyNamespace
             this.Status = status;
         }
 
+        public Commando()
+        {
+           
+        }
+
         public void Walk()
         {
             this.Status = Status.walking;
@@ -66,6 +71,11 @@ namespace MyNamespace
             this.Bullets = bullets;
         }
 
+        public Weapon()
+        {
+            
+        }
+
         public void Shoot()
         {
             this.Bullets -= 1;
@@ -73,5 +83,23 @@ namespace MyNamespace
         }
         
         
+    }
+    
+    class TestClass
+    {
+        static void Main(string[] args)
+        {
+            Commando commando = new Commando();
+            
+            commando.Attack("codename");
+            commando.Hide();
+            commando.Walk();
+
+
+
+            Weapon weapon = new Weapon();
+            
+            weapon.Shoot();
+        }
     }
 }
