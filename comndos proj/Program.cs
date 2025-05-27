@@ -65,6 +65,12 @@ namespace MyNamespace
             this.Make = make;
             this.Bullets = bullets;
         }
+
+        public void Shoot()
+        {
+            this.Bullets -= 1;
+            Console.WriteLine("bang!");
+        }
         
         
     }
