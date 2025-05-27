@@ -52,4 +52,20 @@ namespace MyNamespace
         }
 
     }
+
+    public class Weapon
+    {
+        private string Name { get; set; } 
+        private string Make { get; set; }
+        private int Bullets = 12;
+        
+        public Weapon(string name, string make, int bullets)
+        {
+            this.Name = name;
+            this.Make = make;
+            this.Bullets = bullets;
+        }
+        
+        
+    }
 }
